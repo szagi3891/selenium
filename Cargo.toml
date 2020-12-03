@@ -1,0 +1,15 @@
+[package]
+name = "selenium"
+version = "0.1.0"
+authors = ["Grzegorz Szeliga <grzegorz.szeliga@twoupdigital.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+thirtyfour_sync = "0.20.0"
+thirtyfour = "0.20.2"
+#tokio = { version = "0.3.5", features = ["full"] }
+tokio = { version = "0.2.23", features = ["full"] }
+color-eyre = "0.5.10"
+
