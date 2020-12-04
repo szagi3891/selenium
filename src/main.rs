@@ -49,13 +49,16 @@ async fn main() {
 
     println!("aaa4 - 2");
 
-    //let elem_search = driver.find_element(By::Name("h1")).await.unwrap();
+    //By::Tag()
+    let h1 = driver.find_element(By::Tag("h1")).await.unwrap();
+    let h1_inner = h1.inner_html().await.unwrap();
+    println!("h1 zawartość {}", h1_inner);
 
     let elem_search = driver.find_element(By::Id("searchInput")).await.unwrap();
     elem_search.send_keys("selenium").await.unwrap();
 
     tokio::time::delay_for(Duration::from_secs(5)).await;
-    
+
     println!("aaa5");
 
     let ggg = elem_search.inner_html().await.unwrap();
